@@ -1,0 +1,455 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #191919;
+    margin: 0;
+    opacity: 0;
+    animation: ani 2.5s forwards;
+    scroll-behavior: smooth;
+}
+
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+p {
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 119px;
+    align-items: center;
+    max-width: 1300px;
+}
+
+.header-menu {
+    display: flex;
+    max-width: 403px;
+    max-height: 67px;
+    padding: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.header-menu-text {
+    color: #FFF;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    text-decoration: none;
+    transition: all 0.5ms linear;
+}
+
+.header-menu-text:hover {
+    color: #118DA8;
+}
+
+.frstpart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.frstpart-text {
+    margin-bottom: 60px;
+    max-width: 526px;
+    color: #FFF;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 88px;
+    letter-spacing: 3.2px;
+}
+
+.frstpart-text-700 {
+    color: #FFF;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 88px;
+    letter-spacing: 3.2px;
+    transition: all 0.5s linear;
+}
+
+.frstpart-text-700:hover {
+    color: #118DA8;
+}
+
+.frstpart-social {
+    margin-top: 10px;
+    display: flex;
+    max-height: 32px;
+    align-items: flex-start;
+    gap: 17px;
+}
+
+.frstpart-social-text {
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.frstpart-line {
+    position: relative;
+    bottom: 75px;
+}
+
+.scndpart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1300px;
+}
+
+.scndpart-header {
+    display: flex;
+    align-items: baseline;
+    gap: 650px;
+    max-width: 1300px;
+    margin-bottom: 60px;
+}
+
+.scndpart-text {
+    color: #FFF;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 79.2px;
+    letter-spacing: 2.88px;
+}
+
+.scndpart-header-button {
+    border-radius: 6px;
+    background: #118DA8;
+    padding: 12px 15px;
+    color: #FFF;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.scndpart-header-button:hover {
+    background-color: #191919;
+}
+
+.scndpart-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.scndpart-content-block{
+    border-radius: 32px;
+    background: #000;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 53px;
+    max-width: 1300px;
+}
+
+.scndpart-content-block-smallrect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: #191919;
+    padding: 2px 16px;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 40px;
+}
+
+.scndpart-content-block-hsmalltext{
+    color: #118DA8;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 10px;
+}
+
+.scndpart-content-block-htext{
+    max-width: 701px;
+    color: #FFF;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 70.4px;
+    letter-spacing: 2.56px;
+    margin-bottom: 20px;
+}
+
+.scndpart-content-block-maintext{
+    color: #ffffffb3;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+    margin-bottom: 20px;
+}
+
+.scndpart-content-block-button{
+    border-radius: 6px;
+    background: #118DA8;
+    padding: 12px 15px;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    max-width: 180px;
+}
+
+.scndpart-content-block-button:hover{
+    background-color: black;
+}
+
+.scndpart-content-block-mainpart{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.trdppart{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+.trdppart-textpart{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    max-width: 550px;
+}
+
+.trdppart-circle{
+    border-radius: 400px;
+    display: flex;
+    min-height: 100px;
+    min-width: 100px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s linear;
+}
+
+.trdppart-circle:hover{
+    background: #118DA8;
+}
+
+.trdpart-smallh{
+    color: #118DA8;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.trdppart-name{
+    color: #FFF;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 79.2px;
+    letter-spacing: 2.88px;
+}
+
+.trdpart-maintext{
+    color: #ffffffb3;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+}
+
+.form{
+    border-radius: 32px;
+    background: #000;
+    max-width: 1200px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-decoration{
+    position: relative;
+    top: 436px;
+    left: 45px;
+    scale: 70%;
+}
+
+.form-frstcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-frstcontainer-smallh{
+    color: #118DA8;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.form-frstcontainer-bigh{
+    color: #FFF;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 79.2px;
+    letter-spacing: 2.88px;
+    max-width: 422px;
+}
+
+.form-scndcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: start;
+}
+
+.form-scndcontainer input {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    padding-left: 20px;
+    color: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #191919;
+    background: #191919;
+    width: 522px;
+    height: 82px;
+    transition: all 0.5s linear;
+}
+
+.form-scndcontainer input:hover{
+    border: 1px solid #118DA8 !important;
+}
+
+.form-scndcontainer-button{
+    display: flex;
+    align-items: center;
+    color: #ffffffb3;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28.8px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    background: #118DA8;
+}
+
+.request{
+    margin-top: 100px;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.request-block{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.request-contentblock{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: black;
+    border-radius: 32px;
+    padding: 55px 50px;
+    max-width: 423px;
+    min-height: 255px;
+}
+
+.request-bigt{
+    color: #FFF;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 43.2px;
+    max-width: 312px;
+}
+
+.request-smallt{
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.8px;
+}
+
+.footer{
+    margin-top: 200px;
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+}
+
+.footer-frstcont{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+
+.footer-contact{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-scndcont{
+    display: flex;
+    gap: 150px;
+}
+
+.footer-scndcont-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-scndcont-text{
+    color: #FFF;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.footer-scndcont-text:hover{
+    text-decoration: underline;
+}
