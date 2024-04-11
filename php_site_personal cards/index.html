@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Личные визитки</title>
+    <style>
+        body{
+            background: cadetblue;
+            color: darkslategrey;
+        }
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tac+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<header style="display: flex; align-items: center; justify-content: space-around;">
+    <div style="display: flex; align-items: center"><img alt="" src="img/cactus-svgrepo-com.svg" width="60" height="60"><p style="font-family: 'Tac One', sans-serif; font-size: 36px">Cactu!</p></div>
+    <div style="font-size: 24px">Order now!</div>
+</header>
+<div class="container">
+    <div class="column" style="border: 2px dot-dash white">
+        <img src="img/vis1.jpg" width="400" height="400" alt="Визитка 1">
+        <button onclick="location.href='php/order.php'" id="vis1" style="border: 1px solid black; padding: 20px; font-size: 16px; border-radius: 20px">Заказать</button>
+    </div>
+    <div class="column" style="border: 2px dot-dash white">
+        <img src="img/vis2.jpg" width="400" height="400" style="border: 2px dot-dash white" alt="Визитка 2">
+        <button onclick="location.href='php/order2.php'" style="border: 1px solid black; padding: 20px; font-size: 16px; border-radius: 20px">Заказать</button>
+    </div>
+</div>
+</body>
+</html>
