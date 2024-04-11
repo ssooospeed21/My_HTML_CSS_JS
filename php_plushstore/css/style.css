@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    font-family: Quicksand, sans-serif;
+}
+p{
+    margin: 0;
+}
+
+.wrapper{
+    max-width: 1440px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    margin: 40px 0;
+    background-image: url("../img/teddy-bear-gca1723890_1920.png");
+    padding: 100px 0;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background: #FF9900;
+    padding: 20px;
+    border-radius: 10px;
+}
+#formreg{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background: #FF9900;
+    padding: 20px;
+    border-radius: 10px;
+}
+#loginreg{
+    width: 280px;
+    height: 20px;
+    color: darkgray;
+    border-radius: 20px;
+    border: none;
+}
+#parolreg{
+    width: 280px;
+    height: 20px;
+    color: darkgray;
+    border-radius: 20px;
+    border: none;
+}
+#login{
+    width: 280px;
+    height: 20px;
+    color: darkgray;
+    border-radius: 20px;
+    border: none;
+}
+#parol{
+    width: 280px;
+    height: 20px;
+    color: darkgray;
+    border-radius: 20px;
+    border: none;
+}
+
+.special{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+h3{
+    font-weight: bolder;
+    color: #FF9900;
+    font-size: 42px;
+}
+
+.toys{
+    max-width: 1120px;
+    display: flex;
+    gap: 200px;
+    margin-left: 20px;
+}
+
+.toyblock{
+    max-width: 351px;
+    max-height: 474px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 5px;
+    gap: 20px;
+}
+
+.imgtoyblock{
+    height: 269px;
+    width: 320px;
+}
+
+.texttoyblock{
+    max-width: 320px;
+    display: flex;
+    align-items: center;
+}
+.buttonblock{
+    max-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttontoys{
+    padding: 5px 1px;
+    border: 1px solid #FF9900;
+}

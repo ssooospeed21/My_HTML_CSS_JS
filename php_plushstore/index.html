@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>magaz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script></script>
+</head>
+<body>
+<header>
+    <div class="wrapper" style=" margin-top: 40px ;display: flex; justify-content: space-evenly; align-items: center;">
+        <img src="img/Revelation.logo.svg" alt="">
+        <div style="display: flex; gap: 40px; align-items: center; color: gray; font-size: 24px">
+            <a>Home</a>
+            <a>Order</a>
+            <a>Shop</a>
+        </div>
+        <a href="#log" style="background: #FF9900; padding: 1px 60px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 32px; color: white; border-radius: 10px">Login</a>
+    </div>
+</header>
+<main>
+    <div id="log">
+        <div class="wrapper login">
+            <form action="php/login.php" method="post" id="form">
+                <label for="login"><input type="email" name="login" id="login"></label>
+                <label for="parol"><input type="password" name="pass" id="parol"></label>
+                <button type="submit" style="background: white; padding: 1px 60px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 32px; color: black; border-radius: 10px; border: solid 3px white;">Login</button>
+            </form>
+            <form action="php/rega.php" method="post" id="formreg">
+                <label for="loginreg"><input type="email" name="logen" id="loginreg"></label>
+                <label for="parolreg"><input type="password" name="parol" id="parolreg"></label>
+                <button type="submit" style="background: white; padding: 1px 60px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 32px; color: black; border-radius: 10px; border: solid 3px white;">Register</button>
+            </form>
+        </div>
+    </div>
+    <div class="wrapper special">
+        <div style="display: flex; flex-direction: column; align-items: center; margin: 0">
+            <h3 style="margin: 0">Our special's</h3>
+            <p style="font-size: 24px; margin: 0">Get our top selling products</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 30px">
+            <div><img src="img/teddy-bear-509300__340.png" height="380" width="352" alt=""><p style="font-size: 24px; color: #A7A6A6">Soft goat toy</p></div>
+            <div><img src="img/soft-toy-5202849__340.png" height="380" width="352" alt=""><p style="font-size: 24px; color: #A7A6A6">Soft Dog</p></div>
+            <div><img src="img/pehmonukkeja-228885__340%201.png" height="380" width="352" alt=""><p style="font-size: 24px; color: #A7A6A6">Coloured Dogs</p></div>
+        </div>
+    </div>
+    <div style="background: #FFF6F2; display: flex; align-items: center; justify-content: center; gap: 85px; margin-top: 40px; padding: 40px 0" class="wrapper">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="margin: 0">Home made Feel</h3>
+            <p style="font-size: 24px">Get home made feel with best quality</p>
+            <p style="font-size: 16px; color: darkgrey">FREE SHIPPING ON ALL ORDERS OF 999 OR MORE TO ALL LOCATIONS</p>
+        </div>
+        <div><img src="img/teddy-g104f0b898_1920.png" height="487" width="541" style="border-radius: 15px;" alt=""></div>
+    </div>
+    <div class="wrapper special" style="margin: 40px 0">
+        <div style="display: flex; flex-direction: column; align-items: center; margin: 0">
+            <h3 style="margin: 0">New!</h3>
+            <p style="font-size: 24px; margin: 0">Get our new toys</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 30px">
+            <div><img src="img/teddy-bear-509300__340.png" height="380" width="352" alt=""></div>
+            <div><img src="img/teddy-bear-4231582__340.png" height="380" width="352" alt=""></div>
+            <div><img src="img/teddy-g31511a377_1920.png" height="380" width="352" alt=""></div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div></div>
+</footer>
+</body>
+</html>
