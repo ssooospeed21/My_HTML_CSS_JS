@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Регистрация</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Логотип Travel Blog">
+            <h1>Travel Blog</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="posts.html">Посты</a></li>
+                <li><a href="login.html" id="loginLink">Войти</a></li>
+                <li><a href="register.html" id="registerLink">Регистрация</a></li>
+                <li><a href="create-post.html" id="createPostLink" style="display:none;">Новый пост</a></li>
+                <li><a href="admin.html" id="adminLink" style="display:none;">Админка</a></li>
+                <li><a href="profile.html" id="profileLink" style="display:none;">Профиль</a></li>
+                <li><a href="#" id="logoutLink" style="display:none;" onclick="logout()">Выйти</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main class="auth-container">
+        <h1>Регистрация</h1>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Подтвердите пароль:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit" class="btn">Зарегистрироваться</button>
+        </form>
+        <p>Уже есть аккаунт? <a href="login.html">Войдите</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Travel Blog. Все права защищены.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Пароли не совпадают');
+                return;
+            }
+            
+            if (register(username, password, email)) {
+                alert('Регистрация прошла успешно! Теперь вы можете войти.');
+                window.location.href = 'login.html';
+            } else {
+                alert('Пользователь с таким именем уже существует');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Все посты</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Логотип Travel Blog">
+            <h1>Travel Blog</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="posts.html">Посты</a></li>
+                <li><a href="login.html" id="loginLink">Войти</a></li>
+                <li><a href="register.html" id="registerLink">Регистрация</a></li>
+                <li><a href="create-post.html" id="createPostLink" style="display:none;">Новый пост</a></li>
+                <li><a href="admin.html" id="adminLink" style="display:none;">Админка</a></li>
+                <li><a href="profile.html" id="profileLink" style="display:none;">Профиль</a></li>
+                <li><a href="#" id="logoutLink" style="display:none;" onclick="logout()">Выйти</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main class="posts-page">
+        <h1>Все посты</h1>
+        
+        <div class="post-list">
+            <!-- Пост 1 -->
+            <article class="post-item">
+                <div class="post-image-container">
+                    <img src="images/paris.jpg" alt="Париж" class="post-image">
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">Путешествие в Париж</h2>
+                    <div class="post-meta">
+                        <span><i class="fas fa-user"></i> author1</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2023-05-15</span>
+                    </div>
+                    <p class="post-excerpt">Париж - это город мечты, где каждый уголок пропитан историей и романтикой. От величественной Эйфелевой башни до уютных кафе на Монмартре...</p>
+                    <a href="post-detail.html?id=1" class="read-more-btn">Читать далее</a>
+                </div>
+            </article>
+
+            <!-- Пост 2 -->
+            <article class="post-item">
+                <div class="post-image-container">
+                    <img src="images/swiss.jpg" alt="Швейцария" class="post-image">
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">Горы Швейцарии</h2>
+                    <div class="post-meta">
+                        <span><i class="fas fa-user"></i> admin</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2023-06-01</span>
+                    </div>
+                    <p class="post-excerpt">Швейцарские Альпы поражают своей величественной красотой. Кристально чистые озера, зеленые долины и заснеженные вершины создают...</p>
+                    <a href="post-detail.html?id=2" class="read-more-btn">Читать далее</a>
+                </div>
+            </article>
+
+            <!-- Можно добавить больше постов по аналогии -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Travel Blog. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

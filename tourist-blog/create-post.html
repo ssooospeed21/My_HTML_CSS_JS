@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Новый пост</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Стили для формы создания поста */
+        .post-form {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .post-form h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--dark-color);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 300px;
+            resize: vertical;
+        }
+        
+        .image-upload {
+            border: 2px dashed #ddd;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .image-upload:hover {
+            border-color: var(--primary-color);
+        }
+        
+        #imagePreview {
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        #previewImage {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 5px;
+        }
+        
+        .submit-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Логотип Travel Blog">
+                <h1>Travel Blog</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="posts.html">Посты</a></li>
+                    <li><a href="create-post.html">Новый пост</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="post-form">
+            <h1>Создать новый пост</h1>
+            
+            <form id="postForm">
+                <div class="form-group">
+                    <label for="title">Заголовок поста</label>
+                    <input type="text" id="title" placeholder="Введите заголовок" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="content">Текст поста</label>
+                    <textarea id="content" placeholder="Напишите ваш пост здесь..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Изображение (необязательно)</label>
+                    <div class="image-upload" onclick="document.getElementById('image').click()">
+                        <input type="file" id="image" accept="image/*" style="display:none;">
+                        <p>Нажмите для загрузки изображения</p>
+                    </div>
+                    <div id="imagePreview">
+                        <img id="previewImage" src="#" alt="Превью изображения">
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Опубликовать пост</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Travel Blog. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Превью изображения
+        document.getElementById('image').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    document.getElementById('previewImage').src = event.target.result;
+                    document.getElementById('imagePreview').style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Обработка формы
+        document.getElementById('postForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+            const imageFile = document.getElementById('image').files[0];
+            
+            // Здесь будет логика сохранения поста
+            alert('Пост успешно создан!\nЗаголовок: ' + title);
+            
+            // Очистка формы
+            this.reset();
+            document.getElementById('imagePreview').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

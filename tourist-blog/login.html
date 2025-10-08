@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Вход</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Логотип Travel Blog">
+            <h1>Travel Blog</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="posts.html">Посты</a></li>
+                <li><a href="login.html" id="loginLink">Войти</a></li>
+                <li><a href="register.html" id="registerLink">Регистрация</a></li>
+                <li><a href="create-post.html" id="createPostLink" style="display:none;">Новый пост</a></li>
+                <li><a href="admin.html" id="adminLink" style="display:none;">Админка</a></li>
+                <li><a href="profile.html" id="profileLink" style="display:none;">Профиль</a></li>
+                <li><a href="#" id="logoutLink" style="display:none;" onclick="logout()">Выйти</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main class="auth-container">
+        <h1>Вход в систему</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Войти</button>
+        </form>
+        <p>Ещё нет аккаунта? <a href="register.html">Зарегистрируйтесь</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Travel Blog. Все права защищены.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (login(username, password)) {
+                alert('Вы успешно вошли!');
+                window.location.href = 'index.html';
+            } else {
+                alert('Неверное имя пользователя или пароль');
+            }
+        });
+    </script>
+</body>
+</html>

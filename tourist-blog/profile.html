@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Личный кабинет</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Логотип Travel Blog">
+            <h1>Travel Blog</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="posts.html">Посты</a></li>
+                <li><a href="login.html" id="loginLink">Войти</a></li>
+                <li><a href="register.html" id="registerLink">Регистрация</a></li>
+                <li><a href="create-post.html" id="createPostLink" style="display:none;">Новый пост</a></li>
+                <li><a href="admin.html" id="adminLink" style="display:none;">Админка</a></li>
+                <li><a href="profile.html" id="profileLink" style="display:none;">Профиль</a></li>
+                <li><a href="#" id="logoutLink" style="display:none;" onclick="logout()">Выйти</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main class="profile-container">
+        <h1>Личный кабинет</h1>
+        
+        <div class="profile-info">
+            <div class="profile-avatar">
+                <img src="images/default-avatar.png" alt="Аватар">
+                <button class="btn-change-avatar">Изменить фото</button>
+            </div>
+            
+            <div class="profile-details">
+                <h2>Информация о пользователе</h2>
+                <p><strong>Имя пользователя: Admin</strong> <span id="profileUsername"></span></p>
+                <p><strong>Email: admin@examle.com</strong> <span id="profileEmail"></span></p>
+                <p><strong>Роль: Администратор</strong> <span id="profileRole"></span></p>
+                <p><strong>Дата регистрации: 02.03.2025</strong> <span id="profileDate"></span></p>
+                
+                <button class="btn-edit-profile">Редактировать профиль</button>
+                <button class="btn-change-password">Изменить пароль</button>
+            </div>
+        </div>
+        
+        <div class="user-posts" id="userPostsSection" style="display:none;">
+            <h2>Мои посты</h2>
+            <div id="userPostsList">
+                <!-- Посты будут загружены через JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Travel Blog. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/posts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!currentUser) {
+                window.location.href = 'profile.html';
+                return;
+            }
+            
+            // Заполняем информацию о пользователе
+            document.getElementById('profileUsername').textContent = currentUser.username;
+            document.getElementById('profileEmail').textContent = currentUser.email;
+            document.getElementById('profileRole').textContent = currentUser.role === 'admin' ? 'Администратор' : 
+                                                              currentUser.role === 'author' ? 'Автор' : 'Пользователь';
+            document.getElementById('profileDate').textContent = new Date().toLocaleDateString();
+            
+            // Показываем раздел с постами для авторов и админов
+            if (hasRole('admin') || hasRole('author')) {
+                document.getElementById('userPostsSection').style.display = 'block';
+                renderUserPosts();
+            }
+        });
+        
+        function renderUserPosts() {
+            const userPosts = posts.filter(post => post.author === currentUser.username);
+            const postsList = document.getElementById('userPostsList');
+            
+            if (userPosts.length === 0) {
+                postsList.innerHTML = '<p>У вас пока нет постов.</p>';
+                return;
+            }
+            
+            let html = '';
+            userPosts.forEach(post => {
+                html += `
+                    <div class="user-post">
+                        <h3>${post.title}</h3>
+                        <p>Дата публикации: ${post.date}</p>
+                        <a href="post-detail.html?id=${post.id}" class="btn-view-post">Просмотреть</a>
+                        <button onclick="editPost(${post.id})" class="btn-edit-post">Редактировать</button>
+                        <button onclick="deletePost(${post.id})" class="btn-delete-post">Удалить</button>
+                    </div>
+                `;
+            });
+            
+            postsList.innerHTML = html;
+        }
+        
+        function editPost(postId) {
+            // В реальном проекте здесь будет переход на страницу редактирования
+            alert('Редактирование поста с ID ' + postId);
+        }
+        
+        function deletePost(postId) {
+            if (confirm('Вы уверены, что хотите удалить этот пост?')) {
+                if (deletePost(postId)) {
+                    alert('Пост удален');
+                    renderUserPosts();
+                } else {
+                    alert('Ошибка при удалении поста');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

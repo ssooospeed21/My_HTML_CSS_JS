@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Логотип Travel Blog">
+            <h1>Travel Blog</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="posts.html">Посты</a></li>
+                <li><a href="login.html" id="loginLink">Войти</a></li>
+                <li><a href="register.html" id="registerLink">Регистрация</a></li>
+                <li><a href="create-post.html" id="createPostLink" style="display:none;">Новый пост</a></li>
+                <li><a href="admin.html" id="adminLink" style="display:none;">Админка</a></li>
+                <li><a href="profile.html" id="profileLink" style="display:none;">Профиль</a></li>
+                <li><a href="#" id="logoutLink" style="display:none;" onclick="logout()">Выйти</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section class="hero">
+            <h1>Добро пожаловать в наш туристический блог!</h1>
+            <p>Открывайте новые места вместе с нами</p>
+            <a href="posts.html" class="btn-explore">Исследовать</a>
+        </section>
+
+        <section class="featured-posts">
+            <h2>Популярные посты</h2>
+            <div class="post-grid">
+                <article class="post-card">
+                    <img src="images/post1.jpg" alt="Париж" class="post-image">
+                    <div class="post-content">
+                        <h3>Путешествие в Париж</h3>
+                        <div class="post-meta">
+                            <span><i class="far fa-user"></i> Автор</span>
+                            <span><i class="far fa-calendar"></i> 15 мая</span>
+                        </div>
+                        <p class="post-description">Удивительное путешествие по улицам Парижа, включая посещение Эйфелевой башни и Лувра. Незабываемые впечатления от французской кухни и культуры.</p>
+                        <a href="post-detail.html" class="read-more">Читать далее →</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="images/post2.jpg" alt="Горы" class="post-image">
+                    <div class="post-content">
+                        <h3>Поход в Альпы</h3>
+                        <div class="post-meta">
+                            <span><i class="far fa-user"></i> Автор</span>
+                            <span><i class="far fa-calendar"></i> 1 июня</span>
+                        </div>
+                        <p class="post-description">Незабываемые впечатления от похода по швейцарским Альпам с потрясающими видами. Маршруты для начинающих и опытных туристов.</p>
+                        <a href="post-detail.html" class="read-more">Читать далее →</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="images/post3.jpg" alt="Пляж" class="post-image">
+                    <div class="post-content">
+                        <h3>Отдых на Бали</h3>
+                        <div class="post-meta">
+                            <span><i class="far fa-user"></i> Автор</span>
+                            <span><i class="far fa-calendar"></i> 20 июля</span>
+                        </div>
+                        <p class="post-description">Райские пляжи, тропические леса и уникальная культура острова Бали. Советы по выбору отелей и экскурсий.</p>
+                        <a href="post-detail.html" class="read-more">Читать далее →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Travel Blog. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

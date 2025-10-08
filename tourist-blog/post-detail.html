@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Детали поста</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Логотип Travel Blog">
+            <h1>Travel Blog</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="posts.html">Посты</a></li>
+                <li><a href="login.html" id="loginLink">Войти</a></li>
+                <li><a href="register.html" id="registerLink">Регистрация</a></li>
+                <li><a href="create-post.html" id="createPostLink" style="display:none;">Новый пост</a></li>
+                <li><a href="admin.html" id="adminLink" style="display:none;">Админка</a></li>
+                <li><a href="profile.html" id="profileLink" style="display:none;">Профиль</a></li>
+                <li><a href="#" id="logoutLink" style="display:none;" onclick="logout()">Выйти</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <article id="postDetail" class="post-detail">
+            <!-- Пост будет загружен через JavaScript -->
+        </article>
+        
+        <section id="commentsSection" class="comments-section">
+            <h2>Комментарии</h2>
+            <div id="commentsList">
+                <!-- Комментарии будут загружены через JavaScript -->
+            </div>
+            
+            <form id="commentForm" style="display:none;">
+                <h3>Добавить комментарий</h3>
+                <div class="form-group">
+                    <textarea id="commentText" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+            <p id="loginToComment">Чтобы оставить комментарий, <a href="login.html">войдите</a> или <a href="register.html">зарегистрируйтесь</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Travel Blog. Все права защищены.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/posts.js"></script>
+    <script>
+        function getPostIdFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            return parseInt(params.get('id'));
+        }
+        
+        function renderPost() {
+            const postId = getPostIdFromUrl();
+            const post = getPostById(postId);
+            
+            if (!post) {
+                document.getElementById('postDetail').innerHTML = '<p>Пост не найден.</p>';
+                return;
+            }
+            
+            let html = `
+                <h1>${post.title}</h1>
+                <p class="post-meta">Автор: ${post.author} | Дата: ${post.date}</p>
+                ${post.image ? `<img src="${post.image}" alt="${post.title}" class="post-image-detail">` : ''}
+                <div class="post-content">${post.content}</div>
+            `;
+            
+            if (hasRole('admin')) {
+                html += `<button onclick="deletePost(${post.id})" class="btn btn-danger">Удалить пост</button>`;
+            }
+            
+            document.getElementById('postDetail').innerHTML = html;
+        }
+        
+        function renderComments() {
+            const postId = getPostIdFromUrl();
+            const post = getPostById(postId);
+            
+            if (!post || post.comments.length === 0) {
+                document.getElementById('commentsList').innerHTML = '<p>Пока нет комментариев.</p>';
+                return;
+            }
+            
+            let html = '';
+            post.comments.forEach(comment => {
+                html += `
+                    <div class="comment">
+                        <p class="comment-meta">${comment.author} | ${comment.date}</p>
+                        <p>${comment.text}</p>
+                    </div>
+                `;
+            });
+            
+            document.getElementById('commentsList').innerHTML = html;
+        }
+        
+        function deletePost(postId) {
+            if (confirm('Вы уверены, что хотите удалить этот пост?')) {
+                if (deletePost(postId)) {
+                    alert('Пост удален');
+                    window.location.href = 'posts.html';
+                } else {
+                    alert('Ошибка при удалении поста');
+                }
+            }
+        }
+        
+        window.onload = function() {
+            updateUI();
+            renderPost();
+            renderComments();
+            
+            const commentForm = document.getElementById('commentForm');
+            const loginToComment = document.getElementById('loginToComment');
+            
+            if (currentUser) {
+                commentForm.style.display = 'block';
+                loginToComment.style.display = 'none';
+                
+                commentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const text = document.getElementById('commentText').value;
+                    const postId = getPostIdFromUrl();
+                    
+                    if (addComment(postId, text)) {
+                        alert('Комментарий добавлен!');
+                        document.getElementById('commentText').value = '';
+                        renderComments();
+                    } else {
+                        alert('Ошибка при добавлении комментария');
+                    }
+                });
+            } else {
+                commentForm.style.display = 'none';
+                loginToComment.style.display = 'block';
+            }
+        };
+    </script>
+</body>
+</html>
