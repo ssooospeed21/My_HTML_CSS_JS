@@ -1,0 +1,1092 @@
+body {
+    background-color: white;
+    margin: 0;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fdir-col{
+    flex-direction: column;
+}
+
+.bg-olive {
+    background: #8AA07B;
+}
+
+.header {
+    width: 100%;
+    padding: 14px 39px;
+    background: #8AA07B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    position: fixed;
+    z-index: 3;
+}
+
+.frame1 {
+    width: 100%;
+    max-width: 1357px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.logo {
+    width: 62px;
+    height: 56.15px;
+    mix-blend-mode: multiply;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.menu-item {
+    color: white;
+    font-size: 16px;
+    font-family: Playfair;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    text-decoration: none;
+    transition: all 0.4s linear;
+}
+
+.menu-item:hover {
+    text-decoration: line-through;
+}
+
+.line1 {
+    width: 100%;
+    max-width: 1357px;
+    border: 1px solid white;
+}
+
+.about-banner {
+    padding: 51px 54px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 41px;
+    margin-top: 100px;
+}
+
+.banner-text1, .banner-text2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.dd-grooming {
+    width: 100%;
+    max-width: 400px;
+    text-align: right;
+    color: black;
+    font-size: 38px;
+    font-family: 'Playfair Display SC';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.description {
+    width: 100%;
+    max-width: 400px;
+    text-align: right;
+    color: black;
+    font-size: 28px;
+    font-family: 'Inter';
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.services {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    color: black;
+    font-size: 28px;
+    font-family: 'Inter';
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.banner {
+    width: 100%;
+    max-width: 450px;
+}
+
+.slogan {
+    align-self: stretch;
+    height: auto;
+    color: black;
+    font-size: 38px;
+    font-family: 'Playfair Display SC';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.image-banner {
+    padding: 90px 315px 40px;
+    background-image: url("img/action_banner_bg.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 22px;
+}
+
+.text-box {
+    width: 100%;
+    max-width: 810px;
+    height: auto;
+    padding: 37px 56px;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+}
+
+.title {
+    color: white;
+    font-size: 38px;
+    font-family: 'Playfair Display SC';
+    font-weight: 400;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.subtitle {
+    width: 100%;
+    max-width: 494px;
+    text-align: center;
+}
+
+.subtitle-part1 {
+    color: white;
+    font-size: 28px;
+    font-family: 'Inter';
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.56px;
+    word-wrap: break-word;
+}
+
+.subtitle-part2 {
+    color: white;
+    font-size: 28px;
+    font-family: 'Playfair';
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.56px;
+    word-wrap: break-word;
+}
+
+.subtitle-part3 {
+    color: white;
+    font-size: 38px;
+    font-family: 'Caveat';
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.76px;
+    word-wrap: break-word;
+}
+
+.button {
+    width: 100%;
+    max-width: 231px;
+    height: auto;
+}
+
+.about-action-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 195px;
+    height: auto;
+    aspect-ratio: 195 / 53.60;
+    background: white;
+    box-shadow: -5px 5px 18px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 1px solid #C38E67;
+    color: black;
+    font-size: 20px;
+    font-family: 'Playfair';
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.about-action-button:hover {
+    background: none;
+    color: white;
+    border: none;
+}
+
+.carousel-inner {
+    position: unset !important;
+    width: 355% !important;
+    overflow: hidden;
+    max-width: 1225px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 77px;
+}
+
+.carousel-item{
+    margin: 0 !important;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    position: unset !important;
+}
+
+.carousel-indicators{
+    position: unset !important;
+}
+
+.carousel{
+    position: unset !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.review {
+    width: 100%;
+    max-width: 870px;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.image-slider {
+    width: 100%;
+    max-width: 369px;
+    max-height: 462px;
+}
+
+.review-content {
+    width: 100%;
+    max-width: 419px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.review-title {
+    color: white;
+    font-size: 42px;
+    font-family: 'Playfair Display SC';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.line {
+    width: 100%;
+    border: 1px solid white;
+}
+
+.review-text {
+    color: white;
+    font-size: 24px;
+    font-family: 'Inter';
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.about-end-section {
+    padding: 37px 188px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.end-title {
+    width: 100%;
+    max-width: 651px;
+    color: black;
+    font-size: 36px;
+    font-family: 'Playfair Display SC';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.dd-grooming2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.grooming-text1 {
+    color: black;
+    font-size: 28px;
+    font-family: 'Inter';
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.grooming-text2 {
+    color: black;
+    font-size: 28px;
+    font-family: 'Playfair';
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.grooming-text3 {
+    color: black;
+    font-size: 42px;
+    font-family: 'Caveat';
+    font-weight: 400;
+    line-height: 22px;
+    word-wrap: break-word;
+}
+
+.service-for-dogs-connect-bd {
+    padding: 66px 94px 31px;
+    background: #EBEBEB;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 45px;
+}
+
+.service-header {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.title-service {
+    max-width: 408px;
+    color: black;
+    font-size: 36px;
+    font-family: 'Playfair Display SC';
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.line5, .line6 {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.dd-grooming-service {
+    width: 100%;
+    max-width: 747px;
+    text-align: center;
+    color: black;
+    font-size: 28px;
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: 0.56px;
+    word-wrap: break-word;
+}
+
+.service-cart {
+    width: 100%;
+    max-width: 1252px;
+    padding: 0 51px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.service-image {
+    width: 100%;
+    max-width: 644px;
+    height: auto;
+}
+
+.service-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.text {
+    padding: 20px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.title-service-cart {
+    color: black;
+    font-size: 36px;
+    font-family: 'Playfair';
+    font-weight: 400;
+    word-wrap: break-word;
+    max-width: fit-content;
+}
+
+.description-service-cart {
+    width: 100%;
+    max-width: 359px;
+    color: black;
+    font-size: 22px;
+    font-family: 'Inter';
+    font-weight: 300;
+    line-height: 27px;
+    word-wrap: break-word;
+}
+
+.warning-service-cart {
+    padding: 6px;
+    background: rgba(195, 142, 103, 0.54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 300;
+    line-height: 25px;
+    word-wrap: break-word;
+}
+
+.additional-info {
+    color: black;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 300;
+    line-height: 25px;
+    word-wrap: break-word;
+}
+
+.price-service {
+    color: black;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 300;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.button-service {
+    width: 100%;
+    max-width: 202px;
+    padding: 16px 48px;
+    background: white;
+    border: 1px solid #8D8D8D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    font-size: 18px;
+    font-family: 'Playfair';
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.button-service:hover {
+    background: black;
+    color: #EBEBEB;
+}
+
+
+.service-add-ons-footer {
+    width: 110%;
+    padding: 30px 150px;
+    background: #8AA07B;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 19px;
+}
+
+.add-ons-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.add-ons-title {
+    width: 100%;
+    max-width: 301px;
+    color: white;
+    font-size: 36px;
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.add-ons-line6 {
+    width: 100%;
+    max-width: 1100px;
+    border: 1px solid white;
+}
+
+.add-ons-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.add-ons-line-4, .add-ons-line-3 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 34px;
+}
+
+.add-ons-line-3 {
+    max-width: 833px;
+}
+
+.add-on {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.add-on-title {
+    color: white;
+    font-size: 28px;
+    font-family: 'Playfair';
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    max-width: 255px;
+}
+
+.add-on-description {
+    width: 100%;
+    max-width: 255px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.add-on-price {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.contacts-banner {
+    width: 100%;
+    padding: 51px 54px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 52px;
+}
+
+.banner-text1-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.banner-title-contacts {
+    text-align: right;
+    color: black;
+    font-size: 38px;
+    font-family: 'Playfair Display SC';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.dd-grooming-contacts {
+    width: 100%;
+    max-width: 525px;
+}
+
+.grooming-text1-contacts {
+    color: black;
+    font-size: 28px;
+    font-family: 'Inter';
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.grooming-text2-contacts {
+    color: black;
+    font-size: 38px;
+    font-family: 'Caveat';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.banner-contacts {
+    width: 100%;
+    max-width: 577px;
+    height: auto;
+}
+
+
+.image {
+    width: 100%;
+    max-width: 577px;
+    height: auto;
+}
+
+.contacts2 {
+    width: 100%;
+    padding: 51px 54px;
+    background: #8AA07B;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 66px;
+}
+
+.cart-contacts2 {
+    width: 100%;
+    max-width: 547px;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.image-contacts2 {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.text-contacts2 {
+    padding: 20px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.title-contacts2 {
+    color: white;
+    font-size: 36px;
+    font-family: 'Playfair Display SC';
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.description-contacts2 {
+    width: 100%;
+    max-width: 624px;
+    color: white;
+    font-size: 22px;
+    font-family: 'Inter';
+    font-weight: 300;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.button-contacts2 {
+    width: 100%;
+    max-width: 191.08px;
+    height: auto;
+    padding: 14px 43px;
+    background: black;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Playfair';
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    transition: all 0.4s ease;
+}
+
+.button-contacts2:hover {
+    border: 1px solid black;
+}
+
+.contact-info {
+    width: 100%;
+    max-width: 624px;
+}
+
+.contact-text1, .contact-text2 {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter';
+    line-height: 25px;
+    word-wrap: break-word;
+}
+
+.contact-text2 {
+    font-weight: 400;
+}
+
+.footer {
+    width: 100%;
+    padding: 13px 34px;
+    background: #8AA07B;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 31px;
+}
+
+.frame2-footer {
+    width: 100%;
+    max-width: 1285px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-footer {
+    width: 100%;
+    max-width: 148px;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+.line1-footer {
+    width: 100%;
+    max-width: 1357px;
+    border: 1px solid white;
+}
+
+.line2-footer {
+    height: 190px;
+    width: 0;
+    border: 1px solid white;
+}
+
+.frame3-footer {
+    padding: 0 6px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 120px;
+}
+
+.menu-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.menu-title-footer {
+    color: white;
+    font-size: 22px;
+    font-family: 'Playfair';
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.credits{
+    max-width: 152px;
+}
+
+.menu-item-footer {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.menu-item-footer:hover {
+    text-decoration: line-through;
+}
+
+.rights {
+    color: white;
+    font-size: 16px;
+    font-family: 'Playfair';
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.d-flex1030{
+    display: none;
+}
+
+.d-none1030{
+    display: flex;
+}
+
+.d-flex840{
+    display: none !important;
+}
+
+@media (max-width: 656px){
+    .cart-contacts2{
+        align-items: center;
+    }
+    .frame2-footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .line2-footer{
+        height: 0;
+        width: 100%;
+    }
+    .frame3-footer{
+        flex-wrap: wrap;
+    }
+    .service-image{
+        width: 140%;
+    }
+    .image-slider{
+        width: 142%;
+    }
+    .review-content {
+        width: 100%;
+        max-width: 419px;
+        padding: 15px 0px 53px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .review-title{
+        font-size: 25px;
+    }
+    .review-text{
+        font-size: 18px;
+    }
+    .description{
+        font-size: 22px;
+    }
+    .services{
+        font-size: 22px;
+    }
+    .dd-grooming, .slogan, .title, .end-title, .title-service, .title-service-cart, .add-ons-title, .banner-title-contacts, .title-contacts2 {
+        font-size: 28px;
+    }
+    .subtitle-part1, .grooming-text1, .dd-grooming-service, .grooming-text1-contacts{
+        font-size: 22px;
+    }
+    .grooming-text3, .grooming-text2-contacts{
+        font-size: 32px;
+    }
+    .subtitle-part3{
+        font-size: 28px;
+    }
+    .description-service-cart{
+        font-size: 18px;
+    }
+    .warning-service-cart{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 840px) {
+    .d-none840{
+        display: none !important;
+    }
+    .d-flex840{
+        display: flex !important;
+    }
+    .contacts2{
+        flex-wrap: wrap;
+    }
+    .logo-footer{
+        max-width: 65px;
+    }
+    .frame2-footer{
+        align-items: flex-start;
+    }
+    .frame3-footer{
+        gap: 55px;
+    }
+    .carousel-control-next, .carousel-control-prev{
+        display: none !important;
+    }
+    .menu {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 26px !important;
+        flex-direction: column;
+    }
+    .dropdown-menu.show{
+        display: flex !important;
+    }
+    .menu-item{
+        color: black;
+        font-size: 26px;
+    }
+    .add-ons-line-4, .add-ons-line-3{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1240px){
+    .d-none1030{
+        display: none;
+    }
+    .d-flex1030{
+        display: flex;
+    }
+    .about-banner{
+        max-width: 1024px;
+        flex-direction: column;
+    }
+    .banner{
+        max-width: 680px;
+        justify-content: center;
+    }
+    .dd-grooming{
+        max-width: unset;
+        text-align: center;
+    }
+    .description{
+        max-width: unset;
+        text-align: center;
+    }
+    .services{
+        max-width: unset;
+        text-align: center;
+    }
+    .slogan{
+        max-width: unset;
+        text-align: center;
+    }
+    .image-banner{
+        padding: 40px;
+    }
+    .carousel-inner{
+        max-width: 1024px;
+        padding: 40px;
+        width: 60% !important;
+    }
+    .review{
+        flex-wrap: wrap;
+    }
+    .about-end-section{
+        padding: 37px 40px;
+    }
+    .service-for-dogs-connect-bd{
+        padding: 50px 50px 15px;
+        gap: 90px;
+    }
+    .service-header{
+        max-width: 800px;
+    }
+    .dd-grooming-service{
+        line-height: unset;
+    }
+    .service-cart{
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-description{
+        justify-content: center;
+        align-items: center;
+    }
+    .text{
+        padding: 6px;
+    }
+    .description-service-cart{
+        max-width: unset;
+        line-height: unset;
+    }
+    .warning-service-cart{
+        line-height: unset;
+    }
+    .price-service{
+        line-height: unset;
+    }
+    .additional-info{
+        line-height: unset;
+    }
+    .service-add-ons-footer{
+        padding: 30px;
+        width: 100%;
+    }
+    .add-ons-line-4, .add-ons-line-3{
+        gap: 20px;
+    }
+    .contacts-banner{
+        gap: 30px;
+        padding: 40px 30px;
+        flex-wrap: wrap;
+    }
+}
